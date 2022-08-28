@@ -11,9 +11,9 @@ import lombok.Data;
 
 @Data
 public class City {
-    private String ID;
-    private String Name;
-    private String CountryCode;
-    private String District;
-    private String Population;
+    private String id;
+    private String name;
+    private String countryCode;
+    private String district;
+    private String population;
 }

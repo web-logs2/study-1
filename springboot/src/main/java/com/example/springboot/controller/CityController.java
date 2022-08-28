@@ -3,6 +3,7 @@ package com.example.springboot.controller;
 import com.example.springboot.entity.City;
 import com.example.springboot.service.CityService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -18,7 +19,7 @@ public class CityController {
     @Resource
     CityService cityService;
 
-    @GetMapping("test")
+    @PostMapping("test")
     public void test() {
         List<City> cities = cityService.queryCityList();
         System.out.println(cities);

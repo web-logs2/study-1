@@ -1,0 +1,56 @@
+server:
+  port: 9100
+spring:
+  cloud:
+    # 配置网关
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 启用DiscoveryClient网关集成，可以实现服务的发现
+      routes:
+        - id: labeldetailservice
+          uri: http://localhost:9101
+          predicates:
+            - Path=/openapi/labeldetailservice/**
+          filters:
+            - name: Authorize
+              args:
+                enabled: true
+            - StripPrefix=2
+        - id: screendetailservice
+          uri: http://localhost:9102
+          predicates:
+            - Path=/openapi/screendetailservice/**
+          filters:
+            - name: Authorize
+              args:
+                enabled: true
+            - StripPrefix=2
+        - id: report
+          uri: http://10.204.116.146:8086
+          predicates:
+            - Path=/openapi/report/**
+          filters:
+            - name: Authorize
+              args:
+                enabled: true
+            - StripPrefix=2
+    sentinel: # 整合sentinel配置本次通话质
+      enabled: false #默认开启
+      eager: true # 懒加载 第一次触发进行初始化 默认是懒加载 改为true是饿汉式加载 spring容器启动就加载
+      transport:
+        dashboard: http://localhost:8080
+logging:
+  level:
+    root: info
+  file:
+    path: ./
+    name: gateway.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

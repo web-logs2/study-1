@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.2.1.RELEASE</version>
     </parent>
     <!--版本-->
     <properties>
@@ -30,6 +30,7 @@
         <common-io>2.6</common-io>
         <lombok>1.18.12</lombok>
         <velocity.version>2.0</velocity.version>
+        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>

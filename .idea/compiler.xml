@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test-service" />
-        <module name="springboot" />
+        <module name="mybatis-demo" />
         <module name="concurrency" />
+        <module name="nacos-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="designMode" target="1.8" />
       <module name="test-module" target="1.8" />
     </bytecodeTargetLevel>
@@ -20,6 +22,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="concurrency" options="-parameters" />
+      <module name="mybatis-demo" options="-parameters" />
+      <module name="nacos-demo" options="-parameters" />
       <module name="springboot" options="-parameters" />
       <module name="study" options="-parameters" />
       <module name="test-module" options="-parameters" />

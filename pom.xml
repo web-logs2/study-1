@@ -16,15 +16,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.2.1.RELEASE</version>
     </parent>
     <!--版本-->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <mybatis>3.5.6</mybatis>
         <fastjson>1.2.47</fastjson>
-        <mybatis-plus>3.4.0</mybatis-plus>
         <commons-lang3>3.5</commons-lang3>
         <commons-collections>3.2.1</commons-collections>
         <common-io>2.6</common-io>

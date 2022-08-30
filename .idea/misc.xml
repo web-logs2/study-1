@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/Java-Concurrency-Progamming-Tutorial/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/nacos-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/mybatis-demo/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test-service" />
+        <module name="gateway-demo" />
         <module name="mybatis-demo" />
         <module name="concurrency" />
         <module name="nacos-demo" />
@@ -21,13 +22,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="concurrency" options="-parameters" />
-      <module name="mybatis-demo" options="-parameters" />
-      <module name="nacos-demo" options="-parameters" />
+      <module name="concurrency" options="" />
+      <module name="gateway-demo" options="" />
+      <module name="mybatis-demo" options="" />
+      <module name="nacos-demo" options="" />
       <module name="springboot" options="-parameters" />
       <module name="study" options="-parameters" />
       <module name="test-module" options="-parameters" />
-      <module name="test-service" options="-parameters" />
+      <module name="test-service" options="" />
     </option>
   </component>
 </project>

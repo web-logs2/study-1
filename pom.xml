@@ -13,11 +13,6 @@
         <module>springboot</module>
     </modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
-    </parent>
     <!--版本-->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -28,23 +23,9 @@
         <common-io>2.6</common-io>
         <lombok>1.18.12</lombok>
         <velocity.version>2.0</velocity.version>
-        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
-        <!--springboot相关-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

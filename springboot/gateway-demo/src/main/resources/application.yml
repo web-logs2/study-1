@@ -1,0 +1,23 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.182.138:8848
+        username: nacos
+        password: nacos
+        namespace: public
+    gateway:
+      routes:
+        # http://localhost:8091/openapi/city/test --> http://localhost:8081/city/test
+        - id: custom
+          uri: lb://mybatis-service
+          predicates:
+            - Path=/openapi/city/**
+            - Age=18,60
+          filters:
+            - StripPrefix=1
+

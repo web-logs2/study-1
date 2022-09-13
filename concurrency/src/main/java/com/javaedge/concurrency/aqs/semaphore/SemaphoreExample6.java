@@ -29,6 +29,17 @@ public class SemaphoreExample6 {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        add();
+        for (int i = 0; i < 10; i++) {
+            new Thread(() -> {
+                try {
+                    add();
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+        Thread.sleep(5000);
+        System.out.println(count);
     }
 }

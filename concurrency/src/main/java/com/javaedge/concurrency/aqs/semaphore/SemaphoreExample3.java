@@ -25,6 +25,7 @@ public class SemaphoreExample3 {
                         test(threadNum);
                         semaphore.release(); // 释放一个许可
                     }
+                    log.info(Thread.currentThread().getName() + "：没有获取到锁");
                 } catch (Exception e) {
                     log.error("exception", e);
                 }
@@ -35,6 +36,6 @@ public class SemaphoreExample3 {
 
     private static void test(int threadNum) throws Exception {
         log.info("{}", threadNum);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }

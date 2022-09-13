@@ -12,12 +12,17 @@ spring:
         namespace: public
     gateway:
       routes:
-        # http://localhost:8091/openapi/city/test --> http://localhost:8081/city/test
+        #(网关请求地址) http://localhost:8091/openapi/city/test -->(实际服务地址) http://localhost:8081/city/test
         - id: custom
           uri: lb://mybatis-service
           predicates:
             - Path=/openapi/city/**
             - Age=18,60
+          #局部过滤器
           filters:
             - StripPrefix=1
+            - AddRequestHeader=X-Request-user,chenyile
+            - AddRequestParameter=color,blue
+            - PrefixPath=/pre
+#            - RedirectTo=302,https://www.baidu.com
 

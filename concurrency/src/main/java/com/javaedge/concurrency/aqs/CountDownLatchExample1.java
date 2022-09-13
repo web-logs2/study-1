@@ -13,7 +13,7 @@ public class CountDownLatchExample1 {
 
     public static void main(String[] args) throws Exception {
 
-        ExecutorService exec = Executors.newCachedThreadPool();
+        ExecutorService exec = Executors.newFixedThreadPool(20);
 
         final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
 

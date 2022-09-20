@@ -18,7 +18,8 @@ public class CompletableFurureDemo3 {
     @Test
     public void CompletableFutureAndExecutor() {
         Stream<Integer> integerStream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        ExecutorService executor = Executors.newFixedThreadPool((int) integerStream.count());
+        //ExecutorService executor = Executors.newFixedThreadPool((int) integerStream.count());
+        ExecutorService executor = Executors.newFixedThreadPool(10);
         List<CompletableFuture<Integer>> futureList = integerStream
                 .map(operand ->
                         CompletableFuture.supplyAsync(() -> {
@@ -62,4 +63,5 @@ public class CompletableFurureDemo3 {
         String name = Thread.currentThread().getName();
         System.out.println(time + " " + name);
     }
+
 }

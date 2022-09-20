@@ -3,6 +3,8 @@ package com.javaedge.concurrency;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,7 +43,7 @@ public class UnsafeTest {
                 Thread.currentThread().setName("t3");
                 System.out.println(Thread.currentThread().getName() + " park 5 seconds");
                 //park 5 seconds
-                unsafe.park(true, System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(5,TimeUnit.SECONDS));
+                unsafe.park(true, System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(5, TimeUnit.SECONDS));
                 System.out.println(Thread.currentThread().getName() + " after park");
             }
         };
@@ -56,4 +58,5 @@ public class UnsafeTest {
             e.printStackTrace();
         }
     }
+
 }

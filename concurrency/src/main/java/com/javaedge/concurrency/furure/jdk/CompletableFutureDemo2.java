@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * @author JavaEdge
@@ -11,6 +13,7 @@ import java.util.concurrent.CompletableFuture;
  */
 @Slf4j
 public class CompletableFutureDemo2 {
+
 
     public static void main(String[] args) throws Exception {
         CompletableFuture<String> future1 = CompletableFuture

@@ -15,7 +15,7 @@ public class LongAccumulatorDemo {
             @Override
             public long applyAsLong(long left, long right) {
                 // 返回最大值，这就是自定义的计算
-                return left < right ? left : right;
+                return left > right ? left : right;
             }
         }, 0);
 
@@ -28,6 +28,7 @@ public class LongAccumulatorDemo {
         }
 
         Thread.sleep(2000L);
+        System.out.println(accumulator.get());
         System.out.println(accumulator.longValue()); // 打印出结果
     }
 

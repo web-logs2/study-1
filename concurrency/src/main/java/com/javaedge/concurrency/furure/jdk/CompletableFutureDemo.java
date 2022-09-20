@@ -44,6 +44,7 @@ public class CompletableFutureDemo {
 
         CompletableFuture f3 = CompletableFuture.supplyAsync(task3::call).thenAccept((result) -> callback(result));
 
+
         System.in.read();
     }
 

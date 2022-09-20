@@ -2,10 +2,7 @@ package com.javaedge.concurrency.furure.jdk;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * @author JavaEdge
@@ -25,10 +22,23 @@ public class FutureExample {
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
-        Future<String> future = executorService.submit(new MyCallable());
+        CompletableFuture<Void> voidCompletableFuture = CompletableFuture.runAsync(new MyRunnable(), executorService);
         log.info("do something in main");
         Thread.sleep(1000);
-        String result = future.get();
-        log.info("result：{}", result);
+
+    }
+
+}
+
+class MyRunnable implements Runnable {
+
+    @Override
+    public void run() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Hello");
     }
 }

@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
   servlet:
     context-path: /pre
 spring:
@@ -26,9 +26,24 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+        enabled: false
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #    log-impl: com.example.mybatisdemo.config.SqlOutLogConfig
+
+# 异步线程配置
+# 配置核心线程数
+async:
+  executor:
+    thread:
+      # 配置核心线程数
+      corePoolSize: 10
+      # 配置最大线程数
+      maxPoolSize: 30
+      # 配置队列大小
+      queueCapacity: 99988
+      # 配置线程池中的线程的名称前缀
+      namePrefix: async-thread-

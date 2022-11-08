@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.concurrent.*;
 
 @Slf4j
@@ -26,6 +27,11 @@ class MybatisDemoApplicationTests {
         //Executor asyncServiceExecutor = SpringbootUtils.getBean("asyncServiceExecutor", Executor.class);
         //System.out.println(asyncServiceExecutor);
         cityService.exec();
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

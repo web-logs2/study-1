@@ -25,9 +25,7 @@ public class FutureExample {
         CompletableFuture<Void> voidCompletableFuture = CompletableFuture.runAsync(new MyRunnable(), executorService);
         log.info("do something in main");
         Thread.sleep(1000);
-
     }
-
 }
 
 class MyRunnable implements Runnable {

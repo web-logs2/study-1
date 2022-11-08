@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
@@ -38,5 +39,20 @@ public class AsyncServiceImpl implements AsyncService {
             e.printStackTrace();
         }
         return new AsyncResult<>("hello world");
+    }
+
+    @Async
+    @Override
+    public CompletableFuture<String> asyncMethod3() {
+        log.info("正在执行asyncMethod3方法");
+        String result = "";
+        try {
+            log.info("查询数据库中。。。");
+            result = "hello";
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return CompletableFuture.completedFuture(result);
     }
 }

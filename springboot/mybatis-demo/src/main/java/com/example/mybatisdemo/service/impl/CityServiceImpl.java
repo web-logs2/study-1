@@ -10,6 +10,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,7 +32,9 @@ public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements Ci
     @Override
     public void exec() {
         log.info("开始执行exec方法");
-        asyncService.asyncMethod();
+        CompletableFuture<String> completableFuture = asyncService.asyncMethod3();
+        CompletableFuture<Integer> newFuture = completableFuture.thenApplyAsync((res) -> res.length());
+        log.info("{}", newFuture.join());
         //this.asyncMethod();
         log.info("执行exec方法结束");
     }

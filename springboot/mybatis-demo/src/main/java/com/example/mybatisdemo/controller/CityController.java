@@ -3,6 +3,7 @@ package com.example.mybatisdemo.controller;
 
 import com.example.mybatisdemo.entity.City;
 import com.example.mybatisdemo.service.CityService;
+import com.example.mybatisdemo.util.RequestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -27,10 +28,9 @@ public class CityController {
         return cityService.list();
     }
 
-    @PostMapping("test1")
-    public City test1(@RequestHeader("X-Request-user") String user) {
-        System.out.println(user);
-        return cityService.getById(1);
+    @PostMapping("param/get")
+    public String getParam() {
+       return RequestUtils.getParameter("name");
     }
 
 }

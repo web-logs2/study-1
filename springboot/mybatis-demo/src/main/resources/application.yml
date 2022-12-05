@@ -1,7 +1,7 @@
 server:
   port: 8080
-  servlet:
-    context-path: /pre
+#  servlet:
+#    context-path: /pre
 spring:
   application:
     name: mybatis-service

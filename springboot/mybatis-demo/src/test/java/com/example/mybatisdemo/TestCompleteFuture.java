@@ -163,5 +163,6 @@ public class TestCompleteFuture {
         });
         result.forEach(System.out::println);
         log.info("main线程结束");
+
     }
 }

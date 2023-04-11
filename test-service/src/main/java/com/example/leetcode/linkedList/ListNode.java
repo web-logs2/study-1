@@ -1,6 +1,4 @@
-package com.example.leetcode;
-
-import java.util.List;
+package com.example.leetcode.linkedList;
 
 /**
  * @author chenyile
@@ -8,17 +6,17 @@ import java.util.List;
  * @description:
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
@@ -46,31 +44,5 @@ public class ListNode {
         }
         res.append("NUll");
         return res.toString();
-    }
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 5, 4};
-        ListNode listNode = new ListNode(arr);
-        removeElements(listNode,2);
-        System.out.println(listNode);
-    }
-
-    public static ListNode removeElements(ListNode head, int val) {
-        //处理头节点
-        while(head !=null && head.val==val){
-            head=head.next;
-        }
-        if(head==null){
-            return null;
-        }
-        ListNode tempNode=head;
-        while(tempNode.next!=null){
-            if(tempNode.next.val==val){
-                tempNode.next=tempNode.next.next;
-            }else{
-                tempNode=tempNode.next;
-            }
-        }
-        return head;
     }
 }

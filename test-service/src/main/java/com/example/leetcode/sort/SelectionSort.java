@@ -8,7 +8,7 @@ import java.util.jar.JarEntry;
  * @date 2023/2/8  13:48
  * @description:
  */
-public class SelctionSort {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 5, 6, 7, 4, 9, 8};
         selection(arr);

@@ -10,10 +10,10 @@ import java.util.Map;
  * @date 2023/2/5  20:21
  * @description:
  */
-class Solution {
+class Leetcode17 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        List<String> list = solution.letterCombinations("23");
+        Leetcode17 leetcode17 = new Leetcode17();
+        List<String> list = leetcode17.letterCombinations("23");
         System.out.println(list);
     }
 

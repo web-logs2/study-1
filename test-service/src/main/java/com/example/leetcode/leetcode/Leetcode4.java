@@ -1,9 +1,8 @@
 package com.example.leetcode.leetcode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.CyclicBarrier;
 
 /**
  * @author chenyile
@@ -15,37 +14,45 @@ import java.util.Map;
  * 输入: [0,1,3,4,5,6,7,8,9]
  * 输出: 8
  */
-public class Offer53 {
+public class Leetcode4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList();
         int i = 0;
         int j = 0;
         while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] < nums1[j]) {
+            if (nums1[i] < nums2[j]) {
                 list.add(nums1[i]);
                 i++;
             } else {
                 list.add(nums2[j]);
                 j++;
             }
-            if (i == nums1.length) {
-                while (j < nums2.length) {
-                    list.add(nums2[j]);
-                    j++;
-                }
-            }
-            if (j == nums2.length) {
-                while (i < nums2.length) {
-                    list.add(nums1[i]);
-                    i++;
-                }
+        }
+        if (i == nums1.length) {
+            while (j < nums2.length) {
+                list.add(nums2[j]);
+                j++;
             }
         }
-        int size = list.size();
-        return size % 2 == 0 ? (double) list.get(size / 2) + (double) list.get(size / 2 + 1) : (double) list.get(size / 2);
+        if (j == nums2.length) {
+            while (i < nums1.length) {
+                list.add(nums1[i]);
+                i++;
+            }
+        }
+        return findListMedian(list);
+    }
+
+    public double findListMedian(List<Integer> list) {
+        int mid = (list.size() - 1) / 2;
+        return mid % 2 == 0 ? (list.get(mid) + list.get(mid + 1) + 0.0) / 2 : list.get(mid) + 0.0;
     }
 
     public static void main(String[] args) {
-
+        CyclicBarrier cb=new CyclicBarrier(3);
+        Leetcode4 leetcode4 = new Leetcode4();
+        int[] nums1 = {1, 2};
+        int[] nums2 = {3,4};
+        System.out.println(leetcode4.findMedianSortedArrays(nums1, nums2));
     }
 }

@@ -2,6 +2,7 @@ package com.example.leetcode.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CyclicBarrier;
 
 /**
  * @author chenyile
@@ -48,7 +49,7 @@ public class Leetcode4 {
     }
 
     public static void main(String[] args) {
-
+        CyclicBarrier cb=new CyclicBarrier(3);
         Leetcode4 leetcode4 = new Leetcode4();
         int[] nums1 = {1, 2};
         int[] nums2 = {3,4};

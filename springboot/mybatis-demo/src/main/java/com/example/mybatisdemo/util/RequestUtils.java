@@ -25,4 +25,10 @@ public class RequestUtils {
         HttpServletRequest request = requestAttributes.getRequest();
         return requestAttributes.getRequest().getParameter(name);
     }
+
+    public static HttpServletRequest getCurrentRequest(){
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+        return requestAttributes.getRequest();
+    }
+
 }

@@ -4,12 +4,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-
-/**
- * @author chenyile
- * @date 2022/12/5  22:08
- * @description:
- */
 public class RequestUtils {
 
     public static HttpServletRequest getHttpServletRequest() {
@@ -22,13 +16,6 @@ public class RequestUtils {
      */
     public static String getParameter(String name) {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        HttpServletRequest request = requestAttributes.getRequest();
         return requestAttributes.getRequest().getParameter(name);
     }
-
-    public static HttpServletRequest getCurrentRequest(){
-        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        return requestAttributes.getRequest();
-    }
-
 }

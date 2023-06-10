@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -29,11 +30,14 @@ public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements Ci
     @Resource
     AsyncService asyncService;
 
+    @Resource
+    CityMapper cityMapper;
+
     @Override
     public void exec() {
         log.info("开始执行exec方法");
         CompletableFuture<String> completableFuture = asyncService.asyncMethod3();
-        CompletableFuture<Integer> newFuture = completableFuture.thenApplyAsync((res) -> res.length());
+        CompletableFuture<Integer> newFuture = completableFuture.thenApplyAsync(String::length);
         log.info("{}", newFuture.join());
         //this.asyncMethod();
         log.info("执行exec方法结束");
@@ -49,5 +53,15 @@ public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements Ci
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<City> queryCityById(int id) {
+        return cityMapper.queryCityById(id);
+    }
+
+    @Override
+    public int updateCity(City city) {
+        return cityMapper.updateCity(city);
     }
 }

@@ -23,11 +23,11 @@ public class OrderApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        SaverOrder saverOrder = new SaverOrder();
-        saverOrder.setId(1L);
-        orderService.saveOrder(saverOrder);
-        UpdateOrder updateOrder = new UpdateOrder();
-        updateOrder.setOrderId(2L);
-        orderService.updateOrder(updateOrder);
+        //SaverOrder saverOrder = new SaverOrder();
+        //saverOrder.setId(1L);
+        //orderService.saveOrder(saverOrder);
+        //UpdateOrder updateOrder = new UpdateOrder();
+        //updateOrder.setOrderId(2L);
+        //orderService.updateOrder(updateOrder);
     }
 }

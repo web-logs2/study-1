@@ -28,9 +28,15 @@ public class CityController {
         return cityService.list();
     }
 
+    @GetMapping("test2")
+    public List<City> test2() {
+        List<City> cityList = cityService.queryCityById(1);
+        return cityList;
+    }
+
     @PostMapping("param/get")
     public String getParam() {
-       return RequestUtils.getParameter("name");
+        return RequestUtils.getParameter("name");
     }
 
 }

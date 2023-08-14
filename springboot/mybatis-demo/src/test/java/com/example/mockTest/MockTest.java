@@ -2,22 +2,17 @@ package com.example.mockTest;
 
 import com.example.mybatisdemo.entity.City;
 import com.example.mybatisdemo.service.CityService;
-import com.example.mybatisdemo.service.impl.CityServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.CompletableFuture;
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import static org.mockito.Mockito.*;
 
@@ -110,4 +105,10 @@ public class MockTest {
         verify(random, times(1)).nextInt();
     }
 
+    public static void main(String[] args) {
+        String s="";
+        List<String> list = Arrays.asList(s.split(","));
+        System.out.println(list);
+    }
 }
+

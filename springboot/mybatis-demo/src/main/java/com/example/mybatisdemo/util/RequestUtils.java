@@ -4,9 +4,10 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+
 public class RequestUtils {
 
-    public static HttpServletRequest getHttpServletRequest() {
+    public  HttpServletRequest getHttpServletRequest() {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
         return requestAttributes.getRequest();
     }
@@ -18,4 +19,5 @@ public class RequestUtils {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
         return requestAttributes.getRequest().getParameter(name);
     }
+    
 }

@@ -1,0 +1,958 @@
+{
+  "success": true,
+  "resultMsg": "",
+  "data": {
+    "behavior": "",
+    "code": 200,
+    "correlationId": "",
+    "message": "",
+    "payload": {
+      "decisionSnapshot": {
+        "branchExecuteEntity": null,
+        "decision": "REJECT",
+        "individuals": [
+          {
+            "decision": "validate",
+            "id": "6907eb393d904390e2f6b34c909a530e",
+            "level": "3",
+            "name": "regression_strategy_a3"
+          },
+          {
+            "decision": "validate",
+            "id": "1d6a40b2fec95cdeb9c15454834c53c6",
+            "level": "3",
+            "name": "regression_strategy_a4"
+          },
+          {
+            "decision": "validate",
+            "id": "14320e501fa0f2e70c7324284dd175e7",
+            "level": "3",
+            "name": "regression_strategy_a1_16898214828031868"
+          },
+          {
+            "decision": "validate",
+            "id": "80672a6c0acb6e13ecd4ef35e59cd14c",
+            "level": "3",
+            "name": "regression_strategy_a3_16898214827621503"
+          },
+          {
+            "decision": "validate",
+            "id": "d596cf94eeb4dfcf2d780894c861fa49",
+            "level": "3",
+            "name": "regression_strategy_a4_16898214828982243"
+          },
+          {
+            "decision": "validate",
+            "id": "0e5f31b94b9fca2aae10e3c1149e1542",
+            "level": "3",
+            "name": "regression_strategy_a2_16898214828569477"
+          },
+          {
+            "decision": "validate",
+            "id": "342afe4f7cdb843c683a012974ddb743",
+            "level": "1",
+            "name": "regression_strategy_a1_16898214827828952"
+          }
+        ],
+        "infoCodeEntities": [
+          {
+            "description": "GG",
+            "extension": "{\"one\":\"1\"}",
+            "grade": 1,
+            "memo": "",
+            "name": "GG"
+          },
+          {
+            "description": "pass",
+            "extension": "{\"11\":\"913\"}",
+            "grade": 1,
+            "memo": "",
+            "name": "pass"
+          },
+          {
+            "description": "test",
+            "extension": "{\"k1\":\"1\"}",
+            "grade": 1,
+            "memo": "",
+            "name": "test"
+          },
+          {
+            "description": "F",
+            "extension": "{\"TWO\":\"2\",\"no\":\"不\"}",
+            "grade": 2,
+            "memo": "",
+            "name": "F"
+          }
+        ],
+        "nameListEntities": [],
+        "outputParamEntities": [],
+        "ruleResult": null,
+        "sceneDecisionEntities": [],
+        "verifications": null
+      },
+      "eventId": "5df1af3c-2da8-4e24-b19d-1badb9656a83",
+      "eventUuid": "",
+      "finalDecision": "REJECT",
+      "gmtOccur": "1690180040821",
+      "sceneResultList": [
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a9",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a9",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": [
+            {
+              "expression": "",
+              "fired": false,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": false,
+                      "rightValue": "139",
+                      "type": "vc"
+                    },
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29155",
+                      "leftValue": "-1",
+                      "nodeKey": "r_A-2",
+                      "result": false,
+                      "rightValue": "139",
+                      "type": "vc"
+                    },
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29157",
+                      "leftValue": "null",
+                      "nodeKey": "r_A-3",
+                      "result": false,
+                      "rightValue": "139",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "数据脱敏回归(218222)",
+                "ruleUuid": "abb57321cbac921c0ad0f0e7bf0ddf93",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "数据脱敏回归",
+              "strategyResult": "ACCEPT",
+              "strategyRiskImportance": "",
+              "strategyScore": null,
+              "strategyType": [],
+              "strategyUuid": ""
+            }
+          ]
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a8",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a8",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a7",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a7",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a6",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a6",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a5",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a5",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 97,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 5
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "REJECT",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 6,
+                "rightComparator": "numberLe",
+                "rightValue": 20
+              },
+              "priority": "2",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 21,
+                "rightComparator": "numberLe",
+                "rightValue": 150
+              },
+              "priority": "3",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "回归265版本",
+          "sceneDecision": "VERIFICATION",
+          "sceneName": "regression_scene_265",
+          "sceneVerificationType": [],
+          "scoreMethod": "maxScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": [
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a3(218196)",
+                "ruleUuid": "c664c0f17ce12f23946c77f84c5592c8",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a3",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 97,
+              "strategyType": [],
+              "strategyUuid": ""
+            },
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a4(218201)",
+                "ruleUuid": "b5795d21eb8222a8c47562873c6fef09",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a4",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 1,
+              "strategyType": [],
+              "strategyUuid": ""
+            }
+          ]
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a10",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a10",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a4",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a4",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 97,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 5
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 6,
+                "rightComparator": "numberLe",
+                "rightValue": 7
+              },
+              "priority": "2",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "REJECT",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 90,
+                "rightComparator": "numberLe",
+                "rightValue": 100
+              },
+              "priority": "3",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "regression_scene_265_a2",
+          "sceneDecision": "REJECT",
+          "sceneName": "regression_scene_265_a2",
+          "sceneVerificationType": [],
+          "scoreMethod": "maxScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": [
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a1_16898214828031868(218211)",
+                "ruleUuid": "553fc28db676a828ee90c5c46c9030a4",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a1_16898214828031868",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 60,
+              "strategyType": [],
+              "strategyUuid": ""
+            },
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a3_16898214827621503(218209)",
+                "ruleUuid": "8f2ccb58699f59c20edc87872ccf4170",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a3_16898214827621503",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 97,
+              "strategyType": [],
+              "strategyUuid": ""
+            },
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a4_16898214828982243(218215)",
+                "ruleUuid": "a435f08ca439014c96af80a3ee0497f5",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a4_16898214828982243",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 1,
+              "strategyType": [],
+              "strategyUuid": ""
+            },
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a2_16898214828569477(218213)",
+                "ruleUuid": "0ef7b125eec2c13eaa342c949c39cd39",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a2_16898214828569477",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "3",
+              "strategyScore": 70,
+              "strategyType": [],
+              "strategyUuid": ""
+            }
+          ]
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 60,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 100
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "regression_scene_265_a1",
+          "sceneDecision": "VERIFICATION",
+          "sceneName": "regression_scene_265_a1",
+          "sceneVerificationType": [],
+          "scoreMethod": "totalScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": [
+            {
+              "expression": "",
+              "fired": true,
+              "logicMap": null,
+              "priority": "",
+              "ruleResult": {
+                "logicMap": "",
+                "ruleConditionResultMap": {
+                  "r_A": [
+                    {
+                      "comparetorDesc": "In",
+                      "comparetorName": "InListIngoreCase",
+                      "directShort": false,
+                      "leftConditionDesc": "回归策略合并",
+                      "leftConditionId": "29142",
+                      "leftValue": "1",
+                      "nodeKey": "r_A-1",
+                      "result": true,
+                      "rightValue": "1",
+                      "type": "vc"
+                    }
+                  ]
+                },
+                "ruleName": "regression_strategy_a1_16898214827828952(218226)",
+                "ruleUuid": "bee2c49174ead4bbf628f62a3441081f",
+                "tempParams": [],
+                "userExpression": ""
+              },
+              "sceneCode": "",
+              "sceneName": "",
+              "status": "R",
+              "strategyName": "regression_strategy_a1_16898214827828952",
+              "strategyResult": "VERIFICATION",
+              "strategyRiskImportance": "1",
+              "strategyScore": 60,
+              "strategyType": [],
+              "strategyUuid": ""
+            }
+          ]
+        }
+      ],
+      "simpleSceneResultList": [
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a9",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a9",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a8",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a8",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a7",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a7",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a6",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a6",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a5",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a5",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 97,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 5
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "REJECT",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 6,
+                "rightComparator": "numberLe",
+                "rightValue": 20
+              },
+              "priority": "2",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 21,
+                "rightComparator": "numberLe",
+                "rightValue": 150
+              },
+              "priority": "3",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "回归265版本",
+          "sceneDecision": "VERIFICATION",
+          "sceneName": "regression_scene_265",
+          "sceneVerificationType": [],
+          "scoreMethod": "maxScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a10",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a10",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": false,
+          "fastAnalyzeFlag": false,
+          "finalScore": null,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "",
+          "mergeResults": [],
+          "sceneCode": "regression_scene_265_a4",
+          "sceneDecision": "ACCEPT",
+          "sceneName": "regression_scene_265_a4",
+          "sceneVerificationType": [],
+          "scoreMethod": "",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 97,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 5
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": false,
+                "leftComparator": "numberLe",
+                "leftValue": 6,
+                "rightComparator": "numberLe",
+                "rightValue": 7
+              },
+              "priority": "2",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            },
+            {
+              "bucket": {
+                "finalResult": "REJECT",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 90,
+                "rightComparator": "numberLe",
+                "rightValue": 100
+              },
+              "priority": "3",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "regression_scene_265_a2",
+          "sceneDecision": "REJECT",
+          "sceneName": "regression_scene_265_a2",
+          "sceneVerificationType": [],
+          "scoreMethod": "maxScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        },
+        {
+          "decisionMergeFlag": true,
+          "fastAnalyzeFlag": false,
+          "finalScore": 60,
+          "layerFastTerminateCondition": [],
+          "layerFlag": false,
+          "mergeMode": "scoreMode",
+          "mergeResults": [
+            {
+              "bucket": {
+                "finalResult": "VERIFICATION",
+                "fired": true,
+                "leftComparator": "numberLe",
+                "leftValue": 1,
+                "rightComparator": "numberLe",
+                "rightValue": 100
+              },
+              "priority": "1",
+              "sceneCode": "",
+              "sceneDecision": "",
+              "sceneName": ""
+            }
+          ],
+          "sceneCode": "regression_scene_265_a1",
+          "sceneDecision": "VERIFICATION",
+          "sceneName": "regression_scene_265_a1",
+          "sceneVerificationType": [],
+          "scoreMethod": "totalScore",
+          "strategyExecuteConditionSettingResult": null,
+          "strategyResultList": []
+        }
+      ],
+      "verificationType": []
+    }
+  }
+}

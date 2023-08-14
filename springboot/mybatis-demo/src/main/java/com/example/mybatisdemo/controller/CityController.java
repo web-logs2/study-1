@@ -4,6 +4,7 @@ package com.example.mybatisdemo.controller;
 import com.example.mybatisdemo.entity.City;
 import com.example.mybatisdemo.service.CityService;
 import com.example.mybatisdemo.util.RequestUtils;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -25,7 +26,21 @@ public class CityController {
 
     @PostMapping("test")
     public List<City> test() {
+
         return cityService.list();
+    }
+
+    private static volatile boolean flag=true;
+    @GetMapping("execLoop")
+    public void execLoop() throws InterruptedException {
+        while (flag){
+            //Thread.sleep(5);
+        }
+    }
+
+    @GetMapping("cancelLoop")
+    public void cancelLoop(@Param("flag") Boolean flag){
+        CityController.flag=flag;
     }
 
     @GetMapping("test2")

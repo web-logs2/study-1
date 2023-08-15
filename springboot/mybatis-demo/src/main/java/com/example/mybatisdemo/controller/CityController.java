@@ -30,28 +30,22 @@ public class CityController {
         return cityService.list();
     }
 
-    private static volatile boolean flag=true;
-    @GetMapping("execLoop")
-    public void execLoop() throws InterruptedException {
-        while (flag){
-            //Thread.sleep(5);
-        }
-    }
-
-    @GetMapping("cancelLoop")
-    public void cancelLoop(@Param("flag") Boolean flag){
-        CityController.flag=flag;
-    }
-
     @GetMapping("test2")
     public List<City> test2() {
-        List<City> cityList = cityService.queryCityById(1);
-        return cityList;
+        return cityService.queryCityById(1);
     }
 
     @PostMapping("param/get")
     public String getParam() {
         return RequestUtils.getParameter("name");
+    }
+
+    @PostMapping("getCityList")
+    public List<City> getCityList(@RequestBody List<City> list) {
+        for (City city : list) {
+            city.setName("xxx");
+        }
+        return list;
     }
 
 }
